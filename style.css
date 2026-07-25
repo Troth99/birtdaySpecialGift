@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#8e44ad);
+    position:relative;
+}
+
+/* Плаващи сърца */
+.background-hearts::before,
+.background-hearts::after{
+    content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+    position:absolute;
+    white-space:nowrap;
+    font-size:2rem;
+    opacity:.15;
+    animation:float 20s linear infinite;
+}
+
+.background-hearts::after{
+    top:50%;
+    animation-duration:28s;
+    animation-direction:reverse;
+}
+
+@keyframes float{
+    from{
+        transform:translateX(-100%);
+    }
+    to{
+        transform:translateX(100vw);
+    }
+}
+
+.container{
+    width:90%;
+    max-width:650px;
+    text-align:center;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.25);
+}
+
+h1{
+    color:white;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    color:white;
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+#startBtn{
+
+    padding:18px 40px;
+
+    font-size:1.2rem;
+
+    border:none;
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:linear-gradient(90deg,#ff4b7d,#ff6fa8);
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(255,0,90,.35);
+
+}
+
+#startBtn:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 15px 35px rgba(255,0,90,.55);
+
+}
+
+#startBtn:active{
+    transform:scale(.96);
+}
+
+.hint{
+
+    margin-top:25px;
+
+    color:white;
+
+    opacity:.8;
+
+    font-size:.95rem;
+
+}
+
+.container{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Светещ ефект */
+.container::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:25px;
+
+    background:linear-gradient(45deg,
+    transparent,
+    rgba(255,255,255,.3),
+    transparent);
+
+    z-index:-1;
+
+    animation:shine 6s linear infinite;
+
+}
+
+@keyframes shine{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}

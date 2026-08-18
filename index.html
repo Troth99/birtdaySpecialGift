@@ -9,13 +9,15 @@
   </head>
   <body>
     <div class="background-hearts"></div>
+    <div class="balloons-container" id="balloonsContainer"></div>
 
     <main class="container">
-      <h1>❤️ Happy birthday my beautifull princess ❤️</h1>
+      <section id="startScreen" class="screen active">
+      <h1>❤️ Happy birthday my beautiful princess ❤️</h1>
 
       <p class="subtitle">
         Today you are not just a year older, but also a year wiser and more
-        amazing. 🎉 You are not jsut reciving a gift, but also a lot of love and
+        amazing. 🎉 You are not just receiving a gift, but also a lot of love and
         happiness. 💖
         <br />
         First you need to solve some tasks. ✨
@@ -24,6 +26,60 @@
       <button id="startBtn">🎁 Start the journey</button>
 
       <p class="hint">(I promise you its worth ❤️)</p>
+      </section>
+
+  <section id="question1Screen" class="screen">
+    <p class="quiz-count">Question 1 out of 3</p>
+    <p class="mini-story">Once upon a time, in a faraway forest, wandered a lost little gremlin girl with absolutely no idea what chaos was about to enter her life... and that day, she got caught. 🎯</p>
+    <h2 class="question">So... how exactly did I manage to catch you?</h2>
+    <div class="answers">
+      <button class="answer-btn">You were minding your own business transmogging in Elwynn Forest when some random slid into your DMs.</button>
+      <button class="answer-btn">We bumped into each other mid dungeon key run.</button>
+      <button class="answer-btn">A mutual friend set us up (thanks, whoever you are).</button>
+    </div>
+    <p class="feedback"></p>
+  </section>
+
+    <section id="question2Screen" class="screen">
+    <p class="quiz-count">Question 2 out of 3</p>
+    <p class="mini-story">At first she barely noticed her new collector, poor guy 😅. But little by little (and against all odds), she got hooked and couldn't stay away.</p>
+    <h2 class="question">And how did this gremlin end up stuck to me forever?</h2>
+    <div class="answers">
+      <button class="answer-btn">Just by being AFK and vibing, apparently that's all it took.</button>
+      <button class="answer-btn">Bonding over matching transmogs, obviously.</button>
+      <button class="answer-btn">During a key run where I was heartbroken and you patched me right up ❤️.</button>
+    </div>
+    <p class="feedback"></p>
+  </section>
+
+   <section id="question3Screen" class="screen">
+    <p class="quiz-count">Question 3 out of 3</p>
+    <p class="mini-story">And once they got close, she picked up a new favorite word to call him... constantly... lovingly (?)... what could it possibly be... 🤔</p>
+    <h2 class="question">What's my oh-so-loving nickname from you?</h2>
+    <div class="answers">
+      <button class="answer-btn">Retard.</button>
+      <button class="answer-btn">Idiot.</button>
+      <button class="answer-btn">Dogshit.</button>
+    </div>
+    <p class="feedback"></p>
+  </section>
+
+   <section id="memoriesScreen" class="screen">
+    <h1>💖 Here are some of our adventures 💖</h1>
+    <p class="subtitle">Every moment with you is a gift.</p>
+    <p class="decor-divider">✧ ❤️ ✧</p>
+    <div class="gallery" id="galleryBox"></div>
+    <button id="toFinalBtn">Continue ➜</button>
+  </section>
+      
+  <section id="finalScreen" class="screen">
+    <h1>❤️ Happy birthday ❤️</h1>
+    <p class="decor-divider">✧ 🎂 ✧</p>
+    <p class="final-message" id="finalMessage">Thank you for putting up with a dumb gremlin like me every single day. I love you more than words (or bad WoW jokes) can say. Happy birthday, my love. 🥂💕</p>
+    <p class="days-counter" id="daysCounter"></p>
+        <p class="final-message" id="finalMessage">Now go check your battle net.</p>
+
+  </section>
     </main>
 
     <script src="script.js"></script>
